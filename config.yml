@@ -1,0 +1,9 @@
+# 应用信息
+appinfo:
+    # 版本号
+    version: 1.2.1
+    # 微服务开启的端口号
+    port: 12333
+    # 联系方式
+    contact: anlasheng@gmail.com By Julian
+shell:
