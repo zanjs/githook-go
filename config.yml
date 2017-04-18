@@ -7,3 +7,4 @@ appinfo:
     # 联系方式
     contact: anlasheng@gmail.com By Julian
 shell:
+  file: pull.bat

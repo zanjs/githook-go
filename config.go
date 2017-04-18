@@ -7,4 +7,7 @@ var Config = struct {
 		Port    int    `default:"12300"`
 		Contact string `default:"anlasheng@gmail.com By Julian -anla"`
 	}
+	Shell struct {
+		File string `default:"pull.bat"`
+	}
 }{}

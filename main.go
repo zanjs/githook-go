@@ -23,7 +23,8 @@ func init() {
 	var openStr = welcomeStr + portRed + ymlStr + "\n\n "
 
 	flag.IntVar(&port, "port", Config.APPInfo.Port, "服务器端口")
-	fmt.Println(openStr + fmt.Sprintf("%d", port))
+	// fmt.Println(openStr + fmt.Sprintf("%d", port))
+	fmt.Println(openStr)
 	flag.Parse()
 
 }
@@ -37,3 +38,7 @@ func main() {
 		log.Fatal("ListenAndServe: ", err)
 	}
 }
+
+var (
+	logFileName = flag.String("log", "log.log", "Log file name")
+)

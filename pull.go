@@ -17,12 +17,18 @@ func Pull(w http.ResponseWriter, req *http.Request) {
 
 	fmt.Println(str2)
 
-	cmd := exec.Command("pull.bat")
+	cmd := exec.Command(Config.Shell.File)
 
 	out, err := cmd.CombinedOutput()
 	if err != nil {
 		fmt.Println(err)
+
+		err = fmt.Errorf("%s", err)
+
+		fmt.Println(err.Error())
+
 	}
+	Alog(string(out))
 	fmt.Println(string(out))
 
 	io.WriteString(w, "body")
